@@ -5,7 +5,7 @@ import { getToken } from "@/utils/auth";
 
 // create an axios instance
 const service = axios.create({
-  baseURL: "http://localhost:7001", // 后端地址
+  baseURL: process.env.VUE_APP_BASE_API || "http://localhost:7001", // 后端地址（生产环境使用域名）
   timeout: 10000,
 });
 
